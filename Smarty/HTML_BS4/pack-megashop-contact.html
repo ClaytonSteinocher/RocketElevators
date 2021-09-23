@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Mega Shop</title>
+		<title>Request a quote</title>
 		<meta name="description" content="" />
 		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
 
@@ -73,8 +73,9 @@
 				<!-- 
 					LOGO 
 				-->
+				<a href="feature-menu-1.html">
 				<img src="demo_files/images/packs/megashop/R2logo.png" height="60" alt="">
-
+				</a>
 
 				<!--
 					+ LAYOUT
@@ -1482,7 +1483,7 @@
 
 					<h1>REQUEST A QUOTE</h1>
 
-					<span class="fs-18 fw-300"><em>Drop us a line or just say hello</em></span>
+					<span class="fs-18 fw-300"><em>Fill out name, contact info, and any details.</em></span>
 
 					<!-- breadcrumbs -->
 					<ol class="breadcrumb">
@@ -1577,25 +1578,25 @@
 
 										<div class="row">
 											<div class="col-md-6">
-												<label for="contact:name">Full Name *</label>
+												<label for="contact:name">Full Name:</label>
 												<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
 											</div>
 											<div class="col-md-6">
-												<label for="contact:email">E-mail Address *</label>
+												<label for="contact:email">E-mail Address:</label>
 												<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
 											</div>
 											<div class="col-md-12">
-												<label for="contact:phone">Phone</label>
+												<label for="contact:phone">Phone:</label>
 												<input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
 											</div>
 
 											<div class="col-md-12">
-												<label for="contact:subject">Residential? Business? *</label>
+												<label for="contact:subject">Residential? Business?</label>
 												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
 											</div>
 
 											<div class="col-md-12">
-												<label for="contact:message">Message *</label>
+												<label for="contact:message">Specifics/Details:</label>
 												<textarea required maxlength="10000" rows="6" class="form-control" name="contact[message]" id="contact:message"></textarea>
 											</div>
 										</div>
@@ -1888,15 +1889,15 @@
 				**/
 				var map2 = new GMaps({
 					div: '#map2',
-					lat: -12.043333,
-					lng: -77.028333,
+					lat: 27.77374518523762,
+					lng: -82.63863259260171,
 					scrollwheel: false
 				});
 
 				var marker = map2.addMarker({
-					lat: -12.043333,
-					lng: -77.028333,
-					title: 'Company, Inc.'
+					lat: 27.77374518523762,
+					lng: -82.63863259260171,
+					title: 'Rocket Elevators'
 				});
 
 			});
