@@ -81,71 +81,6 @@
 					+ LAYOUT
 						.header-buttons-bordered
 				-->
-				<ul class="list-inline header-buttons">
-					<li class="list-inline-item">
-						<a href="pack-megashop-cart.html">
-							<i class="fa fa-opencart"></i>
-							<span class="badge badge-default">0</span>
-							my cart
-						</a>
-					</li>
-					<li class="list-inline-item hidden-xs-down">
-						<a href="pack-megashop-account-wishlist.html">
-							<i class="fa fa-heart-o"></i>
-							<span class="badge badge-default">0</span>
-							wishlist
-						</a>
-					</li>
-					<li class="list-inline-item header-button-arrow">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
-							<i class="fa fa-user-o"></i>
-							my account
-						</a>
-						<div class="dropdown-menu dropdown-menu-right">
-							<span><i class="fa fa-user"></i> John Doe</span>
-							<div class="pl-15 pr-15 pt-15 pb-15">
-								<h4 class="fs-13 fw-400 mb-10">Welcome to Smarty!</h4>
-								<a href="pack-megashop-sign-in.html" class="btn btn-primary btn-sm btn-block fw-300">SIGN IN</a>
-								
-								<div class="clearfix mt-8">
-									<span class="fs-11 pt-3 float-left">OR SIGN IN WITH:</span>
-
-									<div class="float-right">
-										<a target="_blank" class="social-icon social-icon-sm social-facebook" href="#">
-											<i class="fa fa-facebook"></i>
-											<i class="fa fa-facebook"></i>
-										</a>
-										<a target="_blank" class="social-icon social-icon-sm social-gplus" href="#">
-											<i class="fa fa-google-plus"></i>
-											<i class="fa fa-google-plus"></i>
-										</a>
-									</div>
-								</div>
-
-
-								<a href="pack-megashop-sign-up.html" class="btn btn-danger btn-sm btn-block fw-300">SIGN UP</a>
-
-							</div>
-
-							<hr>
-
-							<a class="dropdown-item" href="pack-megashop-account-wishlist.html">My Wishlist</a>
-							<a class="dropdown-item" href="pack-megashop-account-orders.html">My Orders</a>
-							<a class="dropdown-item" href="pack-megashop-account-settings.html">Account Settings</a>
-							<a class="dropdown-item dropdown-custom-icon dropdown-myaccount-logout" href="#">
-								<i class="fa fa-power-off"></i> 
-								<b>Log Out</b>
-							</a>
-						</div>
-					</li>
-				</ul>
-
-
-				<form action="#" method="get" class="search-global hidden-sm-down">
-					<input type="text" name="s" class="form-control" placeholder="I'm shopping for...">
-					<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
-				</form>
-
 
 				<!--
 					.main-nav-bordered
@@ -160,19 +95,10 @@
 					<div class="main-nav-mobile-scroll">
 						<ul class="list-unstyled mb-0">
 
-							<li class="main-nav-search hidden-md-up">
-								<form action="#" method="get" class="search-global input-group mb-0">
-									<input type="text" name="s" class="form-control" placeholder="I'm shopping for...">
-									<button class="btn btn-default" type="submit">
-										<i class="fa fa-search"></i>
-									</button>
-								</form>
-							</li>
-
 							<li>
 								<span>
-									<a href="#" data-text="&ndash; EXPLORE ALL">
-										CATEGORIES
+									<a href="feature-menu-1.html">
+										HOME
 									</a>
 								</span>
 							</li>
@@ -180,7 +106,7 @@
 							<li class="main-nav-item">
 								<a href="#" class="text-danger">
 									<i class="fa fa-circle-o-notch text-danger"></i> 
-									MEGASHOP PAGES
+									HOME
 								</a>
 
 								<div class="main-nav-submenu">
@@ -1481,7 +1407,7 @@
 			<section class="page-header page-header-xs mt-60">
 				<div class="container">
 
-					<h1>REQUEST A QUOTE</h1>
+					<h1>CONTACT US</h1>
 
 					<span class="fs-18 fw-300"><em>Fill out name, contact info, and any details.</em></span>
 
@@ -1578,18 +1504,29 @@
 
 										<div class="row">
 											<div class="col-md-6">
-												<label for="contact:name">Full Name:</label>
+												<label for="contact:name">Contact Full Name:</label>
 												<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
 											</div>
 											<div class="col-md-6">
-												<label for="contact:email">E-mail Address:</label>
+												<label for="contact:name">Business Name:</label>
+												<input required type="text" value="" class="form-control" name="contact[business][name][required]" id="contact:name">
+											</div>
+											<div class="col-md-6">
+												<label for="contact:email">E-mail:</label>
 												<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
 											</div>
-											<div class="col-md-12">
-												<label for="contact:phone">Phone:</label>
+											<div class="col-md-6">
+												<label for="contact:phone">Phone Number:</label>
 												<input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
 											</div>
-
+											<div class="col-md-6">
+												<label for="contact:phone">Project Name:</label>
+												<input type="text" value="" class="form-control" name="contact[project][name][required]" id="contact:phone">
+											</div>
+											<div class="col-md-6">
+												<label for="contact:phone">Project Description:</label>
+												<input type="text" value="" class="form-control" name="contact[project][description][required]" id="contact:phone">
+											</div>
 											<div class="col-md-12">
 												<label for="contact:subject">Residential? Business?</label>
 												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
@@ -1633,7 +1570,7 @@
 								h-550
 								h-600
 							-->
-							<div id="map2" class="h-400 grayscale"></div>
+							<div id="map2" class="h-400"></div>
 
 							<hr />
 
@@ -1650,7 +1587,7 @@
 							</p>
 
 							<ul class="list-unstyled list-icons">
-								<li><i class="fa fa-map-marker"></i> <strong>Address:</strong> Street Name, City Name, Country</li>
+								<li><i class="fa fa-map-marker"></i> <strong>Address:</strong> 136 4th St N suite 201, St. Petersburg, Florida, United States</li>
 								<li><i class="fa fa-phone"></i> <strong>Phone:</strong> <a href="tel:1800-555-1234">1800-555-1234</a></li>
 								<li><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@yourdomain.com">mail@yourdomain.com</a></li>
 							</ul>
