@@ -29,6 +29,7 @@
 		<link href="assets/css/color_scheme/blue.css" rel="stylesheet" type="text/css" id="color_scheme" />
 	</head>
 
+
 	<!--
 		AVAILABLE BODY CLASSES:
 		
@@ -168,38 +169,47 @@
 
 			</div>
 
-			<article class = "index-form">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-4"> </div>
-						<div class="col-sm-4">
-							<form>
-								  <div class="form-group">
-									<label for="BuildingType">Building Type:</label>
-									<select class="form-control" id="dropdown-menu">
-									  <option>Residential</option>
-									  <option>Commerical</option>
-									  <option>Corporate</option>
-									  <option>Hybrid</option>
-									</select>
-								  </div>
-								  <div class="form-group">
-									<label for="exampleFormControlSelect2">Example multiple select</label>
-									<select multiple class="form-control" id="exampleFormControlSelect2">
-									  <option>1</option>
-									  <option>2</option>
-									  <option>3</option>
-									  <option>4</option>
-									  <option>5</option>
-									</select>
-								  </div>
-								  <div class="form-group">
-									<label for="exampleFormControlTextarea1">Example textarea</label>
-									<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-								  </div>
-							</form>
-				</div>
-			</article>
+			<body>
+				<form class="p-3">
+					<div class="form-group">
+					  <label for="seeAnotherField">Building Type?</label>
+					  <select class="form-control" id="seeAnotherField">
+							<option value="Residential">Residential</option>
+							<option value="Commercial">Commercial</option>
+							<option value="Corporate">Corportate</option>
+							<option value="Hybrid">Hybrid</option>
+
+					  </select>
+					</div>
+					
+					<div class="form-group" id="residentialFieldDivApartments">
+					  <label for="residentialField">Number of apartments?</label>
+						  <input type="text" class="form-control" id="name">
+					</div>	  
+					<div class="form-group" id="commercialFieldDivApartments">
+					  <label for="commercialField">Number of apartments?</label>
+						  <input type="text" class="form-control" id="name">
+					</div>	  
+					<div class="form-group" id="corporateFieldDivApartments">
+					  <label for="corporateField">Number of apartments?</label>
+						  <input type="text" class="form-control" id="name">
+					</div>	  
+					<div class="form-group" id="hybridFieldDivApartments">
+					  <label for="hybridField">Number of apartments?</label>
+						  <input type="text" class="form-control" id="name">
+					</div>	  
+					
+
+					<div class="form-group" id="numberOfFloors">
+						<label for="name">Number of Floors?</label>
+							<input type="text" class="form-control" id="name">
+					</div>
+					
+					<button type="submit" class="btn btn-primary">Submit</button>
+				  </form>
+				  
+			</body>
+		
 
 			<!-- FOOTER -->
 			<footer id="footer">
@@ -211,12 +221,7 @@
 						<!-- col #1 -->
 						<div class="col-md-8">
 
-							<h3 class="letter-spacing-1">WHY US?</h3>
-
-							<!-- Small Description -->
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.
-							</p>
+							<h3 class="letter-spacing-1">CALL US</h3>
 							<h2>(800) 123-4567</h2>
 						</div>
 						<!-- /col #1 -->
@@ -255,7 +260,7 @@
 							<li>&bull;</li>
 							<li><a href="#">Privacy</a></li>
 						</ul>
-						&copy; All Rights Reserved, Company LTD
+						&copy; All Rights Reserved, Rocket Elevators
 					</div>
 				</div>
 
@@ -283,9 +288,6 @@
 		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
 
 		<script src="assets/js/scripts.js"></script>
-		
-		<!-- STYLESWITCHER - REMOVE -->
-		<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
 
 		<!-- REVOLUTION SLIDER -->
 		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
