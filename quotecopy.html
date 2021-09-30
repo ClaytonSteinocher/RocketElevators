@@ -166,49 +166,50 @@
 					</div>
 				</header>
 				<!-- /Top Nav -->
-
-			</div>
-
 			<body>
-				<form class="p-3">
-					<div class="form-group">
-					  <label for="seeAnotherField">Building Type?</label>
-					  <select class="form-control" id="seeAnotherField">
-							<option value="Residential">Residential</option>
-							<option value="Commercial">Commercial</option>
-							<option value="Corporate">Corportate</option>
-							<option value="Hybrid">Hybrid</option>
+			<form action="quotecopy.html" method="GET">
+				<div class="buildingTypeDropdownMenu" id="buildingType">
+					 <label for="buildingType">Building Type?</label>
+					 <select name="buildingType" id="buildingType" required>
+							<option id="residential" value="residential" onclick="showHide(residentialForm)" >Residential</option>
+							<option id="commercial" value="commercial">Commercial</option>
+							<option id="corporate" value="corporate">Corportate</option>
+							<option id="hybrid" value="hybrid">Hybrid</option>
 
 					  </select>
 					</div>
 					
-					<div class="form-group" id="residentialFieldDivApartments">
-					  <label for="residentialField">Number of apartments?</label>
-						  <input type="text" class="form-control" id="name">
-					</div>	  
-					<div class="form-group" id="commercialFieldDivApartments">
-					  <label for="commercialField">Number of apartments?</label>
-						  <input type="text" class="form-control" id="name">
-					</div>	  
-					<div class="form-group" id="corporateFieldDivApartments">
-					  <label for="corporateField">Number of apartments?</label>
-						  <input type="text" class="form-control" id="name">
-					</div>	  
-					<div class="form-group" id="hybridFieldDivApartments">
-					  <label for="hybridField">Number of apartments?</label>
-						  <input type="text" class="form-control" id="name">
-					</div>	  
+				<div id="residentialForm" class="hidden">
+					<label for="residentialForm">Residential</label>
+					  	<select id = "residentialForm">
+							<option id="residentialNumberOfApartments" value="residenitalNumberOfApartments">Number of apartments?</label>
+								<input class="form-control" type="number" id="residentialNumberOfApartmentsAnswer"></option>
+					  		<option id="residentialNumberOfFloors" id="residentialNumberOfFloors" value="residentialNumberOfFloors">Number of floors?</label>
+								<input class="form-control" type="number" id="residentialNumberOfFloorsAnswer"></option>
+					 	 	<option id="residentialNumberOfBasements" value="residentialNumberOfBasements">Number of basements?</label>
+								<input class="form-control" type="number" id="residentialNumberOfBasementsAnswer"></option>
+						</select>
+				</div>	  
 					
+				<!-- <div id="commercial">
+					  <option label for="commercialField">Number of apartments?</label>
+						  <input type="text" id="name">
 
-					<div class="form-group" id="numberOfFloors">
-						<label for="name">Number of Floors?</label>
-							<input type="text" class="form-control" id="name">
-					</div>
+
+
+
+					</div>	  
+					<div id="hybrid">
+					  <option label for="corporateField">Number of apartments?</label>
+						  <input type="text" id="name">
 					
-					<button type="submit" class="btn btn-primary">Submit</button>
-				  </form>
+					<button type="submit" class="btn btn-primary">Calculate</button>
+					<button type="reset">Reset</button>
+				
 
 			</body>
+			</form> -->
+
 
 			<!-- FOOTER -->
 			<footer id="footer">

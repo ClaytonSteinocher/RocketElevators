@@ -1,31 +1,35 @@
 $("#buildingType").change(function() {
-    if ($(this).val() == "Residential;") {
-      $('#residentialFieldDivApartments').show();
-      $('#residentialField').attr('required', '');
-      $('#residentialField').attr('data-error', 'This field is required.');
-    }
-    else if ($(this).val() == "Commercial;") {
-        $('#commercialFieldDiv').show();
-        $('#commercialField').attr('required', '');
-        $('#commercialField').attr('data-error', 'This field is required.');
-    }
-   else if ($(this).val() == "Corporate;") {
-        $('#commercialFieldDiv').show();
-        $('#commercialField').attr('required', '');
-        $('#commercialField').attr('data-error', 'This field is required.');
-   }   
-    else if ($(this).val() == "Commercial;") {
-        $('#commercialFieldDiv').show();
-        $('#commercialField').attr('required', '');
-        $('#commercialField').attr('data-error', 'This field is required.');
-  };
-  $("#buildingType").trigger("change");
-  
-  $("#numberOfFloors").change(function() {
-    let x = numberOfFloors
-    x -
+            if ($(this).val() == "Residential;") {
+            $('#residentialFieldDivApartments').show();
+            $('#residentialField').attr('required', '');
+            $('#residentialField').attr('data-error', 'This field is required.');
+            }
+            else if ($(this).val() == "Commercial;") {
+                $('#commercialFieldDiv').show();
+                $('#commercialField').attr('required', '');
+                $('#commercialField').attr('data-error', 'This field is required.');
+            }
+        else if ($(this).val() == "Corporate;") {
+                $('#commercialFieldDiv').show();
+                $('#commercialField').attr('required', '');
+                $('#commercialField').attr('data-error', 'This field is required.');
+        }   
+            else if ($(this).val() == "Commercial;") {
+                $('#commercialFieldDiv').show();
+                $('#commercialField').attr('required', '');
+                $('#commercialField').attr('data-error', 'This field is required.');
+        };
+        $("#buildingType").trigger("change");
+});
 
+  $("#numberOfFloors").change(function(){
+    let x = numberOfFloors
+   
+  });
     
+
+
+
     
     if ($(this).val() == "yes") {
       $('#otherFieldGroupDiv').show();
@@ -40,5 +44,21 @@ $("#buildingType").change(function() {
       $('#otherField2').removeAttr('required');
       $('#otherField2').removeAttr('data-error');
     }
-  });
-  $("#seeAnotherFieldGroup").trigger("change");
+    // $("#seeAnotherFieldGroup").trigger("change")
+
+
+    // RESET ALL FIELDS FUNCTION:
+
+    function resetAllFields(){
+      //Reset radio button
+      $("input:radio").prop('checked', false);
+      $("input:radio").closest("label").removeClass("active");
+      //Reset input fields
+      inputFields.forEach((field) => {
+          field.value = "";
+      });
+      //reset results fields
+      resultFields.forEach((field) => {
+          field.value = "";
+      });
+    }
