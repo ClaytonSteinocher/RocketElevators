@@ -14,19 +14,19 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
 
 		<!-- CORE CSS -->
-		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="RocketElevatorAssets/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
 		<!-- REVOLUTION SLIDER -->
-		<link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
-		<link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+		<link href="RocketElevatorAssets/assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
+		<link href="RocketElevatorAssets/assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
 
 		<!-- THEME CSS -->
-		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+		<link href="RocketElevatorAssets/assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="RocketElevatorAssets/assets/css/layout.css" rel="stylesheet" type="text/css" />
 
 		<!-- PAGE LEVEL SCRIPTS -->
-		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/color_scheme/blue.css" rel="stylesheet" type="text/css" id="color_scheme" />
+		<link href="RocketElevatorAssets/assets/css/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="RocketElevatorAssets/assets/css/color_scheme/blue.css" rel="stylesheet" type="text/css" id="color_scheme" />
 	</head>
 
 
@@ -96,7 +96,7 @@
 
 						<!-- Logo -->
 						<a class="logo float-left scrollTo" href="index-onepage-construction.html">
-							<img src="assets/images/_smarty/R2logo.png" alt="" />
+							<img src="RocketElevatorAssets/homepageimages/R2logo.png" alt="" />
 						</a>
 
 						<!-- 
@@ -166,30 +166,100 @@
 					</div>
 				</header>
 				<!-- /Top Nav -->
-			<body>
-			<form action="quotecopy.html" method="GET">
-				<div class="buildingTypeDropdownMenu" id="buildingType">
-					 <label for="buildingType">Building Type?</label>
-					 <select name="buildingType" id="buildingType" required>
-							<option id="residential" value="residential" onclick="showHide(residentialForm)">Residential</option>
-							<option id="commercial" value="commercial">Commercial</option>
-							<option id="corporate" value="corporate">Corportate</option>
-							<option id="hybrid" value="hybrid">Hybrid</option>
 
-					  </select>
-					</div>
+			<form>
+				<!-- Building Select Drop Down -->
+				<div class="buildingTypeDropdownMenu">
+					<label for="buildingType">Building Type?</label>
+					<select name="buildingType" id="building-type" required>
+						<option id="residential" value="">-- Select a Building Type ---</option>
+						<option id="residential" value="residential">Residential</option>
+						<option id="commercial" value="commercial">Commercial</option>
+						<option id="corporate" value="corporate">Corportate</option>
+						<option id="hybrid" value="hybrid">Hybrid</option>
+					</select>
+				</div>
 					
-				<div id="residentialForm" class="hidden">
-					<option label for="residentialForm">Residential</label>
-					  	<select id = "residentialForm">
-							<option id="residentialNumberOfApartments" value="residenitalNumberOfApartments">Number of apartments?</label>
-								<input class="form-control" type="number" id="residentialNumberOfApartmentsAnswer"></option>
-					  		<option id="residentialNumberOfFloors" id="residentialNumberOfFloors" value="residentialNumberOfFloors">Number of floors?</label>
-								<input class="form-control" type="number" id="residentialNumberOfFloorsAnswer"></option>
-					 	 	<option id="residentialNumberOfBasements" value="residentialNumberOfBasements">Number of basements?</label>
-								<input class="form-control" type="number" id="residentialNumberOfBasementsAnswer"></option>
-						</select>
+				<!-- Input Fields -->
+				<div id="number-of-apartments">
+					<label>Number of Apartments</label>
+					<input type="number" min="0" id="numApartments">
 				</div>	  
+
+				<div id="number-of-floors">
+					<label>Number of Floors</label>
+					<input type="number" min="0" id="numFloors">
+				</div>	
+
+				<div id="number-of-basements">
+					<label>Number of Basements</label>
+					<input type="number" min="0" id="numBasements">
+				</div>
+
+				<div id="number-of-businesses">
+					<label>Number of Distinct Businesses</label>
+					<input type="number" min="0" id="numDistinctBusinesses">
+				</div>
+				
+				<div id="number-of-parking-spaces">
+					<label>Number of Parking Spaces</label>
+					<input type="number" min="0" id="numParkingSpaces">
+				</div>
+				
+				<div id="number-of-elevator-cages">
+					<label>Number of Elevator Cages</label>
+					<input type="number" min="0" id="numElevatorCages">
+				</div>
+				
+				<div id="number-of-separate-companies">
+					<label>Number of Separate Companies</label>
+					<input type="number" min="0" id="numSeperateCompanies">
+				</div>
+				
+				<div id="number-of-occupants-per-floor">
+					<label>Number of Occupants per Floor</label>
+					<input type="number" min="0" id="numOccupantsPerFloor">
+				</div>
+				
+				<div id="number-of-hours-of-activity">
+					<label>Number of Hours of Activity</label>
+					<input type="number" min="0" max="24" id="numHoursOfActivity">
+				</div>
+
+				<!-- Cab Grade Raio Buttons -->
+				<div>
+					<label>Select Cab Grade</label>
+					<input type="button" value="standard" name="cab-grade"> Standard
+					<input type="button" value="premium" name="cab-grade"> Premium
+					<input type="button" value="excelium" name="cab-grade"> Excelium
+				</div>
+
+				<!-- Result Fields -->
+
+				<div id="elevator-amount">
+					<label>Number of Elevators</label>
+					<input type="number" min="0" id="elevatorNumber">
+			   </div>
+				
+			   <div id="elevator-unit-price">
+					<label>Unit Price of Elevators</label>
+					<input type="number" min="0" id="elevatorUnitPrice">
+			   </div>
+			   
+			   <div id="elevator-total-price">
+				    <label>Total Price of Elevators</label>
+					<input type="number" min="0" id="elevatorTotalPrice">
+				</div>
+			   
+				<div id="installation-fees">
+				    <label>Installation Fees</label>
+					<input type="number" min="0" id="installationFees">
+				</div>
+
+				<div id="final-price">
+				    <label>Final Price</label>
+					<input type="number" min="0" id="finalPrice">
+				</div>
 
 					
 				
@@ -226,11 +296,7 @@
 								<input class="form-control" type="number" id="commercialNumberOfBasementsAnswer"></option>
 						</select>
 					</div>	   -->
-					<button type="submit" class="btn btn-primary">Calculate</button>
-					<button type="reset">Reset</button>
-				
 
-			</body>
 			</form>
 
 
@@ -307,18 +373,18 @@
 
 
 		<!-- JAVASCRIPT FILES -->
-		<script>var plugin_path = 'assets/plugins/';</script>
-		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
-		<script src="assets/js/scripts.js"></script>
-		<script src="assets/js/quote.js"></script>
+		<!-- <script>var plugin_path = 'assets/plugins/';</script> -->
+		<script src="RocketElevatorAssets/assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+		<script src="RocketElevatorAssets/assets/js/scripts.js"></script>
+		<script src="RocketElevatorAssets/assets/js/quote.js"></script>
 
 		<!-- REVOLUTION SLIDER -->
-		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
-		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
-		<script src="assets/js/view/demo.revolution_slider.js"></script>
+		<script src="RocketElevatorAssets/assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
+		<script src="RocketElevatorAssets/assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
+		<script src="RocketElevatorAssets/assets/js/view/demo.revolution_slider.js"></script>
 
 		<!-- PAGELEVEL SCRIPTS -->
-		<script src="assets/js/contact.js"></script>
+		<script src="RocketElevatorAssets/assets/js/contact.js"></script>
 
 	</body>
 </html>
