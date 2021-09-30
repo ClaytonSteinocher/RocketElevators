@@ -171,7 +171,7 @@
 				<div class="buildingTypeDropdownMenu" id="buildingType">
 					 <label for="buildingType">Building Type?</label>
 					 <select name="buildingType" id="buildingType" required>
-							<option id="residential" value="residential" onclick="showHide(residentialForm)" >Residential</option>
+							<option id="residential" value="residential" onclick="showHide(residentialForm)">Residential</option>
 							<option id="commercial" value="commercial">Commercial</option>
 							<option id="corporate" value="corporate">Corportate</option>
 							<option id="hybrid" value="hybrid">Hybrid</option>
@@ -180,7 +180,7 @@
 					</div>
 					
 				<div id="residentialForm" class="hidden">
-					<label for="residentialForm">Residential</label>
+					<option label for="residentialForm">Residential</label>
 					  	<select id = "residentialForm">
 							<option id="residentialNumberOfApartments" value="residenitalNumberOfApartments">Number of apartments?</label>
 								<input class="form-control" type="number" id="residentialNumberOfApartmentsAnswer"></option>
@@ -190,25 +190,48 @@
 								<input class="form-control" type="number" id="residentialNumberOfBasementsAnswer"></option>
 						</select>
 				</div>	  
+
 					
-				<!-- <div id="commercial">
-					  <option label for="commercialField">Number of apartments?</label>
-						  <input type="text" id="name">
+				
+					<!-- <div id="corporateForm">
+					 <option label for="corporateForm">Corporate</label>
+					  	<select id = "corporateForm">
+							<option id="corporateNumberOfApartments" value="corporateNumberOfApartments">Number of apartments?</label>
+								<input class="form-control" type="number" id="corporateNumberOfApartmentsAnswer"></option>
+					  		<option id="corporateNumberOfFloors" id="residentialNumberOfFloors" value="residentialNumberOfFloors">Number of floors?</label>
+								<input class="form-control" type="number" id="corporateNumberOfFloorsAnswer"></option>
+					 	 	<option id="corporateNumberOfBasements" value="corporateNumberOfBasements">Number of basements?</label>
+								<input class="form-control" type="number" id="corporateNumberOfBasementsAnswer"></option>
+						</select>
 
-
-
-
+					<div id="commercialForm">
+					 <option label for="commercialForm">Commercial</label>
+					  	<select id = "commercialForm">
+							<option id="commercialNumberOfApartments" value="commercialNumberOfApartments">Number of apartments?</label>
+								<input class="form-control" type="number" id="commercialNumberOfApartmentsAnswer"></option>
+					  		<option id="commercialNumberOfFloors" id="residentialNumberOfFloors" value="residentialNumberOfFloors">Number of floors?</label>
+								<input class="form-control" type="number" id="commercialNumberOfFloorsAnswer"></option>
+					 	 	<option id="commericalNumberOfBasements" value="commercialNumberOfBasements">Number of basements?</label>
+								<input class="form-control" type="number" id="commercialNumberOfBasementsAnswer"></option>
+						</select>
 					</div>	  
-					<div id="hybrid">
-					  <option label for="corporateField">Number of apartments?</label>
-						  <input type="text" id="name">
-					
+					<div id="hybridForm">
+					 <option label for="hybridForm">Hybrid</label>
+					  	<select id = "hybridForm">
+							<option id="hybridNumberOfApartments" value="hybridNumberOfApartments">Number of apartments?</label>
+								<input class="form-control" type="number" id="commercialNumberOfApartmentsAnswer"></option>
+					  		<option id="commercialNumberOfFloors" id="residentialNumberOfFloors" value="residentialNumberOfFloors">Number of floors?</label>
+								<input class="form-control" type="number" id="commercialNumberOfFloorsAnswer"></option>
+					 	 	<option id="commericalNumberOfBasements" value="commercialNumberOfBasements">Number of basements?</label>
+								<input class="form-control" type="number" id="commercialNumberOfBasementsAnswer"></option>
+						</select>
+					</div>	   -->
 					<button type="submit" class="btn btn-primary">Calculate</button>
 					<button type="reset">Reset</button>
 				
 
 			</body>
-			</form> -->
+			</form>
 
 
 			<!-- FOOTER -->
@@ -297,34 +320,5 @@
 		<!-- PAGELEVEL SCRIPTS -->
 		<script src="assets/js/contact.js"></script>
 
-		<!-- 
-			GMAP.JS 
-			http://hpneo.github.io/gmaps/
-		-->
-		<script src="//maps.google.com/maps/api/js?key=AIzaSyCqCn84CgZN6o1Xc3P4dM657HIxkX3jzPY"></script>
-		<script src="assets/plugins/gmaps.js"></script>
-		<script>
-
-			jQuery(document).ready(function(){
-
-				/**
-					@BASIC GOOGLE MAP
-				**/
-				var map2 = new GMaps({
-					div: '#map2',
-					lat: 27.77374518523762,
-					lng: -82.63863259260171,
-					scrollwheel: false
-				});
-
-				var marker = map2.addMarker({
-					lat: 27.77374518523762,
-					lng: -82.63863259260171,
-					title: 'CodeBoxx'
-				});
-
-			});
-
-		</script>
 	</body>
 </html>
