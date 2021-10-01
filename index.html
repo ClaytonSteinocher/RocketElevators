@@ -47,8 +47,6 @@
 		pattern1 ... patern11	= pattern background
 		menu-vertical-hide		= hidden, open on click
 		
-		BACKGROUND IMAGE [together with .boxed class]
-		data-background="RocketElevatorAssets/assets/images/_smarty/boxed_background/1.jpg"
 	-->
 	<body class="smoothscroll enable-animation">
 
@@ -94,7 +92,7 @@
 						</button>
 
 						<!-- Logo -->
-						<a class="logo float-left scrollTo" href="index-onepage-construction.html">
+						<a class="logo float-left scrollTo" href="index.html">
 							<img src="RocketElevatorAssets/homepageimages/R2logo.png" alt="" />
 						</a>
 
@@ -115,46 +113,39 @@
 								-->
 								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
 									<li class="active"><!-- HOME -->
-										<a href="index-onepage-construction.html">
+										<a href="index.html">
 											HOME
 										</a>
 									</li>
 								</li>
-								<li class="dropdown"><!-- SERVICES -->
-									<a class="dropdown-toggle" href="#">
-										SERVICES
-									</a>
-									<ul class="dropdown-menu">
-										<li class="dropdown">
-											<a class="dropdown-toggle" href="residential.html">
-												RESIDENTIAL BUILDING SERVICES
-											</a>
-										</li>
-										<li class="dropdown">
-											<a class="dropdown-toggle" href="commercial.html">
-												COMMERICIAL AND CORPORATE BUILDING SERVICES
-											</a>
-										</li>
-									</ul>
-								</li>
+									<li><!-- RESIDENTIAL -->
+										<a href="#residential.html">
+											RESIDENTIAL
+										</a>
+									</li>
+									<li><!-- COMMERCIAL -->
+										<a href="#commercial.html">
+											COMMERCIAL
+										</a>
+									</li>
 									<li><!-- PORTFOLIO -->
-										<a href="#portfolio">
+										<a href="index.html#portfolio">
 											PORTFOLIO
 										</a>
 									</li>
 									<li><!-- NEWS -->
-										<a href="#news">
+										<a href="index.html#news">
 											NEWS
 										</a>
 									</li>
 									<li><!-- CLIENTS-->
-										<a href="#clients">
+										<a href="index.html#clients">
 											CLIENTS
 										</a>
 									</li>
 									<li><!-- CONTACT -->
-										<a href="#contact">
-											CONTACT
+										<a href="index.html#contact">
+											CONTACTS
 										</a>
 									</li>
 								</ul>
@@ -438,7 +429,7 @@
 
 
 			<!-- Parallax -->
-			<section class="parallax parallax-1" style="background-image: url('demo_files/images/dark.jpg');">
+			<section class="parallax parallax-1" style="background-image: url('RocketElevatorAssets/homepageimages/dark.jpg');">
 				<div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
 
 				<div class="container">
@@ -953,26 +944,26 @@
 
 									<div class="row">
 											<div class="col-md-4">
-												<label for="contact:name">Contact Full Name:</label>
-												<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
+												<label for="contact:name">Name:</label>
+												<input required type="text" value="" class="form-control" name="contact[name][required]" id="name">
 											</div>
 											<div class="col-md-4">
 												<label for="contact:email">E-mail:</label>
-												<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
+												<input required type="email" value="" class="form-control" name="contact[email][required]" id="email">
 											</div>
 											<div class="col-md-4">
-												<label for="contact:phone">Phone Number:</label>
-												<input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
+												<label for="contact:phone">Phone:</label>
+												<input type="text" value="" class="form-control" name="contact[phone]" id="phone">
 											</div>
 									</div>
 									<div class="row">
 											<div class="col-md-8">
-												<label for="contact:subject">Subject *</label>
-												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+												<label for="contact:subject">Company Name:</label>
+												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="company_name">
 											</div>
 											<div class="col-md-4">
-												<label for="contact_department">Project Type:</label>
-												<select class="form-control pointer" name="contact[department]">
+												<label for="contact_department">Department:</label>
+												<select class="form-control pointer" name="contact[department]" id="department">
 													<option value="">--- Select ---</option>
 													<option value="residential">Residential</option>
 													<option value="commercial">Commercial</option>
@@ -984,7 +975,7 @@
 									<div class="row">
 										<div class="col-md-6">
 											<label for="contact:phone">Project Name:</label>
-											<input type="text" value="" class="form-control" name="contact[project][name][required]" id="contact:phone">
+											<input type="text" value="" class="form-control" name="contact[project][name][required]" id="project_name">
 										</div>
 										<div class="col-md-6">
 											<label for="contact:phone">Project Description:</label>
@@ -994,8 +985,8 @@
 								</div>
 									<div class="row">
 											<div class="col-md-12">
-												<label for="contact:message">Specifics/Details:</label>
-												<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
+												<label for="contact:message">Message:</label>
+												<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="message"></textarea>
 											</div>
 									</div>
 									<div class="row">
@@ -1003,7 +994,7 @@
 												<label for="contact:attachment">File Attachment</label>
 
 												<!-- custom file upload -->
-												<input class="custom-file-upload" type="file" id="file" name="contact[attachment]" id="contact:attachment" data-btn-text="Select a File" />
+												<input class="custom-file-upload" type="file" id="file" name="contact[attachment]" id="attachment" data-btn-text="Select a File" />
 												<small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
 
 											</div>
@@ -1046,9 +1037,9 @@
 							<hr />
 
 							<p>
-								<span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> 136 4th St N suite 201, St. Petersburg, Florida, United States</span>
-								<span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:1800-555-1234">1800-555-1234</a></span>
-								<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:mail@yourdomain.com">mail@yourdomain.com</a></span>
+								<span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> 418-725 Boulevard Lebourgneuf, Québec, QC G2J 0C4, Canada</span>
+								<span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:1800-555-1234">(418) 555-1234</a></span>
+								<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:mail@yourdomain.com">info@codeboxx.biz</a></span>
 							</p>
 
 						</div>
@@ -1067,62 +1058,58 @@
 			<footer id="footer">
 				<div class="container">
 
-
 					<div class="row">
-
-						<!-- col #1 -->
-						<div class="col-md-8">
+						
+						<div class="col-md-3">
+							<!-- Footer Logo -->
+							<img class="footer-logo" src="RocketElevatorAssets/homepageimages/R2logo.png" alt="" />
 
 							<h3 class="letter-spacing-1">WHY US?</h3>
 
 							<!-- Small Description -->
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.
+								We have the conviction that we create the most innovative and reliable products on the market. Contact us today for any questions you might have.
 							</p>
-							<h2>(800) 123-4567</h2>
 						</div>
-						<!-- /col #1 -->
-
-						<!-- col #2 -->
-						<div class="col-md-4">
-							<h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
-
-							<!-- Newsletter Form -->
-							<p>Subscribe to Our Newsletter to get Important News & Offers</p>
-
-							<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
-									<span class="input-group-btn">
-										<button class="btn btn-success" type="submit">Subscribe</button>
-									</span>
-								</div>
-							</form>
-							<!-- /Newsletter Form -->
-
+						<div class="col-md-3">
+							<!-- Contact Address -->
+							<address>
+								<ul class="list-unstyled">
+									<li class="footer-sprite address">
+										418-725 Boulevard Lebourgneuf,<br>
+										Québec, QC G2J 0C4, Canada<br>
+									</li>
+									<li class="footer-sprite phone">
+										Phone: (418) 555-1234
+									</li>
+									<li class="footer-sprite email">
+										<a href="mailto:info@codeboxx.biz">info@codeboxx.biz</a>
+									</li>
+								</ul>
+							</address>
+							<!-- /Contact Address -->
 
 						</div>
-						<!-- /col #2 -->
 
-					</div>
+						<div class="col-md-3">
 
-
-				</div>
-
-				<div class="copyright">
-					<div class="container">
-						<ul class="float-right m-0 list-inline mobile-block">
-							<li><a href="#">Terms &amp; Conditions</a></li>
-							<li>&bull;</li>
-							<li><a href="#">Privacy</a></li>
-						</ul>
-						&copy; All Rights Reserved, Company LTD
-					</div>
-				</div>
-
-			</footer>
-			<!-- /FOOTER -->
+							<!-- Latest News -->
+							<h4 class="letter-spacing-1">LATEST NEWS</h4>
+							<ul class="footer-posts list-unstyled">
+								<li>
+									<a href="https://elevatortoday.com/2012/10/13/mezolift-first-solar-elevator/">Mezolift first solar elevator!</a>
+									<small>13th Oct 2012</small>
+								</li>
+								<li>
+									<a href="https://elevatortoday.com/2020/12/23/r-i-s-e-now-operational/">R.I.S.E now operational</a>
+									<small>23th Dec 2020</small>
+								</li>
+								<li>
+									<a href="https://elevatortoday.com/2013/09/18/arent-building-space-elevator/">Why aren't we building a space elevator?</a>
+									<small>18th Sep 2013</small>
+								</li>
+							</ul>
+							<!-- /Latest News
 
 		</div>
 		<!-- /wrapper -->
@@ -1169,14 +1156,14 @@
 				**/
 				var map2 = new GMaps({
 					div: '#map2',
-					lat: 27.77374518523762,
-					lng: -82.63863259260171,
+					lat: 46.84288925484157,
+					lng: -71.27966822290209,
 					scrollwheel: false
 				});
 
 				var marker = map2.addMarker({
-					lat: 27.77374518523762,
-					lng: -82.63863259260171,
+					lat: 46.84288925484157,
+					lng: -71.27966822290209,
 					title: 'CodeBoxx'
 				});
 

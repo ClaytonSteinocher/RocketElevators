@@ -48,8 +48,6 @@
 		pattern1 ... patern11	= pattern background
 		menu-vertical-hide		= hidden, open on click
 		
-		BACKGROUND IMAGE [together with .boxed class]
-		data-background="RocketElevatorAssets/assets/images/_smarty/boxed_background/1.jpg"
 	-->
 	<body class="smoothscroll enable-animation">
 
@@ -154,7 +152,7 @@
 										</a>
 									</li>
 									<li><!-- CONTACT -->
-										<a href="#contact">
+										<a href="index.html#contact">
 											CONTACT
 										</a>
 									</li>
@@ -166,89 +164,227 @@
 					</div>
 				</header>
 				<!-- /Top Nav -->
-
 			</div>
-
-			<body>
-				<form class="p-3">
-					<div class="form-group">
-					  <label for="seeAnotherField">Building Type?</label>
-					  <select class="form-control" id="seeAnotherField">
-							<option value="Residential">Residential</option>
-							<option value="Commercial">Commercial</option>
-							<option value="Corporate">Corportate</option>
-							<option value="Hybrid">Hybrid</option>
-
-					  </select>
-					</div>
+	
+			<form>
+				<!-- Building Select Drop Down -->
+				<div class="buildingTypeDropdownMenu" style="text-align: center;">
+					<label for="buildingType">Building Type?</label>
+					<select name="buildingType" id="building-type" required>
+						<option>-- Select a Building Type ---</option>
+						<option id="residential" value="residential">Residential</option>
+						<option id="commercial" value="commercial">Commercial</option>
+						<option id="corporate" value="corporate">Corportate</option>
+						<option id="hybrid" value="hybrid">Hybrid</option>
+					</select>
+				</div>
+				<br>
 					
-					<div class="form-group" id="residentialFieldDivApartments">
-					  <label for="residentialField">Number of apartments?</label>
-						  <input type="text" class="form-control" id="name">
-					</div>	  
-					<div class="form-group" id="commercialFieldDivApartments">
-					  <label for="commercialField">Number of apartments?</label>
-						  <input type="text" class="form-control" id="name">
-					</div>	  
-					<div class="form-group" id="corporateFieldDivApartments">
-					  <label for="corporateField">Number of apartments?</label>
-						  <input type="text" class="form-control" id="name">
-					</div>	  
-					<div class="form-group" id="hybridFieldDivApartments">
-					  <label for="hybridField">Number of apartments?</label>
-						  <input type="text" class="form-control" id="name">
-					</div>	  
-					
+				<!-- Input Fields -->
+				<div id="number-of-apartments" style="display: none; text-align: center;">
+					<label>Number of Apartments</label>
+					<input type="number" min="0" id="numApartments">
+				</div>
+				<br>	  
 
-					<div class="form-group" id="numberOfFloors">
-						<label for="name">Number of Floors?</label>
-							<input type="text" class="form-control" id="name">
-					</div>
-					
-					<button type="submit" class="btn btn-primary">Submit</button>
-				  </form>
+				<div id="number-of-floors" style="display: none; text-align: center;">
+					<label>Number of Floors</label>
+					<input type="number" min="0" id="numFloors">
+				</div>
+				<br>	
 
-			</body>
+				<div id="number-of-basements" style="display: none; text-align: center;">
+					<label>Number of Basements</label>
+					<input type="number" min="0" id="numBasements">
+				</div>
+				<br>
+
+				<div id="number-of-businesses" style="display: none; text-align: center;">
+					<label>Number of Distinct Businesses</label>
+					<input type="number" min="0" id="numDistinctBusinesses">
+				</div>
+				<br>
+				
+				<div id="number-of-parking-spots" style="display: none; text-align: center;">
+					<label>Number of Parking Spaces</label>
+					<input type="number" min="0" id="numParkingSpaces">
+				</div>
+				<br>
+				
+				<div id="number-of-elevators" style="display: none; text-align: center;">
+					<label>Number of Elevator Cages</label>
+					<input type="number" min="0" id="numElevatorCages">
+				</div>
+				<br>
+				
+				<div id="number-of-companies" style="display: none; text-align: center;">
+					<label>Number of Separate Companies</label>
+					<input type="number" min="0" id="numSeperateCompanies">
+				</div>
+				<br>
+
+				<div id="number-of-corporations" style="display: none; text-align: center;">
+					<label>Number of Separate Corporations</label>
+					<input type="number" min="0" id="numOfCorporations">
+				</div>
+				<br>
+				
+				<div id="maximum-occupancy" style="display: none; text-align: center;">
+					<label>Number of Occupants per Floor</label>
+					<input type="number" min="0" id="numOccupantsPerFloor">
+				</div>
+				<br>
+				
+				<div id="business-hours" style="display: none; text-align: center;">
+					<label>Number of Hours of Activity</label>
+					<input type="number" min="0" max="24" id="numHoursOfActivity">
+				</div>
+				<br>
+
+				<!-- Cab Grade Raio Buttons -->
+				<div>
+					<label>Select Cab Grade</label>
+					<input type="radio" value="standard" name="cab-grade"> Standard
+					<input type="radio" value="premium" name="cab-grade"> Premium
+					<input type="radio" value="excelium" name="cab-grade"> Excelium
+				</div>
+				<br>
+
+				<!-- Result Fields -->
+
+				<div id="elevator-amount" style="text-align: center;">
+					<label>Number of Elevators</label>
+					<input type="number" min="0" id="elevatorNumber" readonly>
+			   </div>
+			   <br>
+				
+			   <div id="elevator-unit-price" style="text-align: center;">
+					<label>Unit Price of Elevators</label>
+					<input type="number" min="0" id="elevatorUnitPrice" readonly>
+			   </div>
+			   <br>
+			   
+			   <div id="elevator-total-price" style="text-align: center;">
+				    <label>Total Price of Elevators</label>
+					<input type="number" min="0" id="elevatorTotalPrice" readonly>
+				</div>
+				<br>
+			   
+				<div id="installation-fees" style="text-align: center;">
+				    <label>Installation Fees</label>
+					<input type="number" min="0" id="installationFees" readonly>
+				</div>
+				<br>
+
+				<div id="final-price" style="text-align: center;">
+				    <label>Final Price</label>
+					<input type="number" min="0" id="finalPrice" readonly>
+				</div>
+
+			</form>
+
 
 			<!-- FOOTER -->
 			<footer id="footer">
 				<div class="container">
 
-
 					<div class="row">
+						
+						<div class="col-md-3">
+							<!-- Footer Logo -->
+							<img class="footer-logo" src="RocketElevatorAssets/homepageimages/R2logo.png" alt="" />
 
-						<!-- col #1 -->
-						<div class="col-md-8">
+							<h3 class="letter-spacing-1">WHY US?</h3>
 
-							<h3 class="letter-spacing-1">CALL US</h3>
-							<h2>(800) 123-4567</h2>
+							<!-- Small Description -->
+							<p>
+								We have the conviction that we create the most innovative and reliable products on the market. Contact us today for any questions you might have.
+							</p>
 						</div>
-						<!-- /col #1 -->
-
-						<!-- col #2 -->
-						<div class="col-md-4">
-							<h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
-
-							<!-- Newsletter Form -->
-							<p>Subscribe to Our Newsletter to get Important News & Offers</p>
-
-							<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
-									<span class="input-group-btn">
-										<button class="btn btn-success" type="submit">Subscribe</button>
-									</span>
-								</div>
-							</form>
-							<!-- /Newsletter Form -->
-
+						<div class="col-md-3">
+							<!-- Contact Address -->
+							<address>
+								<ul class="list-unstyled">
+									<li class="footer-sprite address">
+										418-725 Boulevard Lebourgneuf,<br>
+										Québec, QC G2J 0C4, Canada<br>
+									</li>
+									<li class="footer-sprite phone">
+										Phone: (418) 555-1234
+									</li>
+									<li class="footer-sprite email">
+										<a href="mailto:info@codeboxx.biz">info@codeboxx.biz</a>
+									</li>
+								</ul>
+							</address>
+							<!-- /Contact Address -->
 
 						</div>
-						<!-- /col #2 -->
+
+						<div class="col-md-3">
+
+							<!-- Latest News -->
+							<h4 class="letter-spacing-1">LATEST NEWS</h4>
+							<ul class="footer-posts list-unstyled">
+								<li>
+									<a href="https://elevatortoday.com/2012/10/13/mezolift-first-solar-elevator/">Mezolift first solar elevator!</a>
+									<small>13th Oct 2012</small>
+								</li>
+								<li>
+									<a href="https://elevatortoday.com/2020/12/23/r-i-s-e-now-operational/">R.I.S.E now operational</a>
+									<small>23th Dec 2020</small>
+								</li>
+								<li>
+									<a href="https://elevatortoday.com/2013/09/18/arent-building-space-elevator/">Why aren't we building a space elevator?</a>
+									<small>18th Sep 2013</small>
+								</li>
+							</ul>
+							<!-- /Latest News -->
+
+						</div>
+
+						<div class="col-md-2">
+
+							<!-- Links -->
+							<h4 class="letter-spacing-1">ROCKET ELEVATORS</h4>
+							<ul class="footer-links list-unstyled">
+								<li><a href="index.html">HOME</a></li>
+								<li><!-- RESIDENTIAL -->
+									<a href="#residential.html">
+										RESIDENTIAL
+									</a>
+								</li>
+								<li><!-- COMMERCIAL -->
+									<a href="#commercial.html">
+										COMMERCIAL
+									</a>
+								</li>
+								<li><!-- PORTFOLIO -->
+									<a href="index.html#portfolio">
+										PORTFOLIO
+									</a>
+								</li>
+								<li><!-- NEWS -->
+									<a href="index.html#news">
+										NEWS
+									</a>
+								</li>
+								<li><!-- CLIENTS-->
+									<a href="index.html#clients">
+										CLIENTS
+									</a>
+								</li>
+								<li><!-- CONTACT -->
+									<a href="index.html#contact">
+										CONTACTS
+									</a>
+								</li>
+							</ul>
+							<!-- /Links -->
+
+						</div>
 
 					</div>
-
 
 				</div>
 
@@ -262,12 +398,8 @@
 						&copy; All Rights Reserved, Rocket Elevators
 					</div>
 				</div>
-
 			</footer>
 			<!-- /FOOTER -->
-
-		</div>
-		<!-- /wrapper -->
 
 
 		<!-- SCROLL TO TOP -->
@@ -283,8 +415,8 @@
 
 
 		<!-- JAVASCRIPT FILES -->
-		
-		<!-- <script src="RocketElevatorAssets/assets/plugins/jquery/jquery-3.3.1.min.js"></script> -->
+		<!-- <script>var plugin_path = 'assets/plugins/';</script> -->
+		<script src="RocketElevatorAssets/assets/plugins/jquery/jquery-3.3.1.min.js"></script>
 		<script src="RocketElevatorAssets/assets/js/scripts.js"></script>
 		<script src="RocketElevatorAssets/assets/js/quote.js"></script>
 
@@ -296,34 +428,8 @@
 		<!-- PAGELEVEL SCRIPTS -->
 		<script src="RocketElevatorAssets/assets/js/contact.js"></script>
 
-		<!-- 
-			GMAP.JS 
-			http://hpneo.github.io/gmaps/
-		-->
-		<script src="//maps.google.com/maps/api/js?key=AIzaSyCqCn84CgZN6o1Xc3P4dM657HIxkX3jzPY"></script>
-		<script src="RocketElevatorAssets/assets/plugins/gmaps.js"></script>
-		<script>
+		<!-- Quote Scripts -->
+		<script src="/RocketElevatorAssets/assets/js/quotecopy.js" defer></script>
 
-			jQuery(document).ready(function(){
-
-				/**
-					@BASIC GOOGLE MAP
-				**/
-				var map2 = new GMaps({
-					div: '#map2',
-					lat: 27.77374518523762,
-					lng: -82.63863259260171,
-					scrollwheel: false
-				});
-
-				var marker = map2.addMarker({
-					lat: 27.77374518523762,
-					lng: -82.63863259260171,
-					title: 'CodeBoxx'
-				});
-
-			});
-
-		</script>
 	</body>
 </html>
