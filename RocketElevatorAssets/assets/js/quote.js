@@ -56,23 +56,24 @@ $("#building-type").change(function() {
 
     // Elevator shaft formula
     // $("#numElevatorCages").change("input", function() {
-    function elevatorShaftFormula(){  
-    var number = "numElevatorCages"
+    // function elevatorShaftFormula(){  
+    // var number = "numElevatorCages"
     
     
         
     
         // WIP document.getElementById("elevatorNumber").innerHTML = elevatorCages
         // WIP console.log('equal')
-    };
+    // };
 // $("#numApartments, #numFloors").on("input", function() {
 //     // Grabbing the value
 //     var apartmentVal = $(this).val()
     
-//     // Running some complex calculations 
+//     // Testing calculations
 //     let calc = apartmentVal * 1000
+//     console.log('Success')
 
-//     // Displaying back into the browser
+//     // Displaying back into the browser. Hopefully this works?
 //     $("#finalPrice").val(calc)
 // });
 
