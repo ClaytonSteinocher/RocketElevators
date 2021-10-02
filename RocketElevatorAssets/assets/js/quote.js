@@ -54,13 +54,17 @@ $("#building-type").change(function() {
         }
 });
 
-function calc()
-{
-    var numElevaorCages = (document.getElementById(numElevaorCages).value)
-    var elevatornumber = (document.getElementById(elevatornumber).value)
-    let numElevaorCages = elevatornumber
-
-}
+    // Elevator shaft formula
+    // $("#numElevatorCages").change("input", function() {
+    function elevatorShaftFormula(){  
+    var number = "numElevatorCages"
+    
+    
+        
+    
+        // WIP document.getElementById("elevatorNumber").innerHTML = elevatorCages
+        // WIP console.log('equal')
+    };
 // $("#numApartments, #numFloors").on("input", function() {
 //     // Grabbing the value
 //     var apartmentVal = $(this).val()
@@ -71,6 +75,14 @@ function calc()
 //     // Displaying back into the browser
 //     $("#finalPrice").val(calc)
 // });
+
+// function calc()
+// {
+//     var numElevaorCages = (document.getElementById(numElevaorCages).value)
+//     var elevatornumber = (document.getElementById(elevatornumber).value)
+//     let numElevaorCages = elevatornumber
+
+// }
 
 // $("#numFloors").on("input", function() {
 //     // Grabbing the value

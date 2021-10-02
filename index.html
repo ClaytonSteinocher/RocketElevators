@@ -113,38 +113,45 @@
 								-->
 								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
 									<li class="active"><!-- HOME -->
-										<a href="index.html">
+										<a href="index.html" id="home-nav">
 											HOME
 										</a>
 									</li>
 								</li>
-									<li><!-- RESIDENTIAL -->
-										<a href="#residential.html">
-											RESIDENTIAL
-										</a>
-									</li>
-									<li><!-- COMMERCIAL -->
-										<a href="#commercial.html">
-											COMMERCIAL
-										</a>
-									</li>
+								<li class="dropdown"><!-- SERVICES -->
+									<a class="dropdown-toggle" id="services-nav">
+										SERVICES
+									</a>
+									<ul class="dropdown-menu">
+										<li class="dropdown">
+											<a class="dropdown-toggle" href="residential.html">
+												RESIDENTIAL ELEVATOR SERVICES
+											</a>
+										</li>
+										<li class="dropdown">
+											<a class="dropdown-toggle" href="commercial.html">
+												COMMERICIAL AND CORPORATE ELEVATOR SERVICES
+											</a>
+										</li>
+									</ul>
+								</li>
 									<li><!-- PORTFOLIO -->
-										<a href="index.html#portfolio">
+										<a href="index.html#portfolio" id="portfolio-nav">
 											PORTFOLIO
 										</a>
 									</li>
 									<li><!-- NEWS -->
-										<a href="index.html#news">
+										<a href="index.html#news" id="news-nav">
 											NEWS
 										</a>
 									</li>
 									<li><!-- CLIENTS-->
-										<a href="index.html#clients">
+										<a href="index.html#clients" id="clients-nav">
 											CLIENTS
 										</a>
 									</li>
 									<li><!-- CONTACT -->
-										<a href="index.html#contact">
+										<a href="index.html#contact" id="contacts-nav">
 											CONTACTS
 										</a>
 									</li>
@@ -457,9 +464,9 @@
 					<div class="text-center">
 						<ul class="nav nav-pills mix-filter mb-60">
 							<li data-filter="all" class="filter active"><a href="#">All</a></li>
-							<li data-filter="development" class="filter"><a href="#">Development</a></li>
-							<li data-filter="photography" class="filter"><a href="#">Photography</a></li>
-							<li data-filter="design" class="filter"><a href="#">Design</a></li>
+							<li data-filter="development" class="filter"><a href="#">Current</a></li>
+							<li data-filter="photography" class="filter"><a href="#">Recent</a></li>
+							<li data-filter="design" class="filter"><a href="#">Past Year</a></li>
 						</ul>
 					</div>
 
@@ -1109,10 +1116,11 @@
 									<small>18th Sep 2013</small>
 								</li>
 							</ul>
-							<!-- /Latest News
-
-		</div>
-		<!-- /wrapper -->
+							
+						</div>
+					</div>
+				</div>
+			</wrapper>
 
 
 		<!-- SCROLL TO TOP -->
